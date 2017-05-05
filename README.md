@@ -9,7 +9,7 @@ Open up Excel, create a new macro - copy/paste the latest code from our VBcode f
 
 Viola!  In just a couple seconds, you have an organized data dump from Yammer.
 
-**Note:  All posts start with a line that has “FollowFollow” and the user name and comments always have “in reply to” and the user name. The difference in lines changes a little depending on if there’s comments, but they always have “Translated from English” after a post. 
+**Note:  All posts start with a line that has “FollowFollow” and the user name and comments always have “in reply to” and the user name. The difference in lines changes a little depending on if there’s comments, but they always have “Translated from English” after a post.**
 
 
-_Kudos and Praise go to Dan Stoloff for generating this code to help solve a problem for the DOL Innovation Council
+_Kudos and Praise go to Dan Stoloff for generating this code to help solve a problem for the DOL Innovation Council_
