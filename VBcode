@@ -1,0 +1,43 @@
+
+Dim lines() As String = File.ReadAllLines("C:\Users\stoloff.daniel\Desktop\Yammer.txt")
+Dim m As Integer = 0
+        Dim XlApp As Excel.Application
+        Dim XlWorkbook As Excel.Workbook
+        Dim xlWorksheet As Excel.Worksheet
+        XlApp = New Excel.Application
+        XlWorkbook = XlApp.Workbooks.Open("C:\Users\stoloff.daniel\Desktop\Yammer Spreadsheet.xlsx")
+        xlWorksheet = XlWorkbook.Worksheets(1)
+        Dim Row As Integer = 1
+        Dim Column As Integer = 1
+        Do
+            Label1.Text = m & " out of " & lines.Length
+            If m = lines.Length Then
+                Exit Do
+            End If
+            If InStr(lines(m), "FollowFollow") Then
+                Row += 1
+                Column = 1
+                xlWorksheet.Cells(Row, Column) = Mid(lines(m), 1, InStr(lines(m), "FollowFollow") - 1)
+                Column += 1
+                xlWorksheet.Cells(Row, Column) = lines(m + 2)
+                Column += 1
+                If InStr(lines(m + 4), "English") Or Len(Trim(lines(m + 4))) = 0 Then
+                    xlWorksheet.Cells(Row, Column) = lines(m + 3)
+                Else
+                    xlWorksheet.Cells(Row, Column) = lines(m + 4)
+                End If
+                Column += 1
+            End If
+            If InStr(lines(m), "in reply to") And InStr(lines(m), "-") = False Then
+                xlWorksheet.Cells(Row, Column) = Mid(lines(m), 1, InStr(lines(m), "in reply to") - 1)
+                Column += 1
+                xlWorksheet.Cells(Row, Column) = lines(m + 2)
+                Column += 1
+                xlWorksheet.Cells(Row, Column) = lines(m + 3)
+                Column += 1
+            End If
+            m += 1
+        Loop
+        XlWorkbook.Save()
+        XlWorkbook.Close()
+        XlApp.Quit()
