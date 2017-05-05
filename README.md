@@ -12,4 +12,4 @@ Viola!  In just a couple seconds, you have an organized data dump from Yammer.
 **Note:  All posts start with a line that has “FollowFollow” and the user name and comments always have “in reply to” and the user name. The difference in lines changes a little depending on if there’s comments, but they always have “Translated from English” after a post.**
 
 
-_Kudos and Praise go to Dan Stoloff for generating this code to help solve a problem for the DOL Innovation Council_
+_Kudos and Praise go to @DStoloff for generating this code to help solve a problem for the DOL Innovation Council_
