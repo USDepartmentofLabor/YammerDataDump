@@ -5,7 +5,9 @@ Start by scrolling all the way down to the bottom of the Yammer site while you "
 
 Next, copy the whole Yammer from the webpage (with just CTRL+A and CTRL+C) and paste it into word (CTRL+V), to disable Yammers formatting, and then copy into a .txt file for interaction.
 
-Open up Excel, create a new macro - copy/paste the latest code from our VBcode file and run it.
+Open up Visual Studios (or other VB.net software).
+
+Copy/paste the latest code from our VBcode file and run it.
 
 Viola!  In just a couple seconds, you have an organized data dump from Yammer.
 
